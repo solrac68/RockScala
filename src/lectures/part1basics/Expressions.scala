@@ -8,4 +8,10 @@ object Expressions extends App {
   // == != > >= < <=
 
   println((!(1 == x)))
+
+  println("Hola, Scala")
+  println("Hola, Scala")
+  println("Hola, Scala")
+
+
 }

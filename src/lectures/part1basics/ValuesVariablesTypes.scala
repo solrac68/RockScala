@@ -22,5 +22,4 @@ object ValuesVariablesTypes extends App{
   var aVariable:Int = 4 // mutable type
   aVariable =9
   aVariable =10
-
 }
