@@ -38,7 +38,7 @@ object Expressions extends App {
 
   // Code Block
 
-  val aCodeBlock = {
+  val aCodeBlock =
     val y = 2
     val z = y + 1
 
