@@ -35,12 +35,12 @@ object StringOps extends App{
   // F-interpolators
   val speed = 1.2f
   val myth = f"$name can eat $speed%2.2f burgers per minute"
-  println(myth) //Carlos can eat 1.20 burgers per minute
+  println(myth) //Carlos can eat 1.20 burgers per minute...
 
   // raw-interpolators
   println(raw"This is a \n newline ") //This is a \n newline
   println("This is a \n newline ") //This is a
-                                   //  newline
+                                   //newline
   val escaped = "This is a \n newline"
   println(raw"$escaped") //This is a
                          //  newline
