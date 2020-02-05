@@ -3,8 +3,9 @@ package lectures.part2.oop
 object OOBasicCount extends App {
   var counter = new Counter
   counter.print
-  counter.inc.inc.print
-  //counter.inc(5).print
+  //counter.inc.inc.print
+  //counter.inc.inc.dec.print
+  counter.inc(2).print
 }
 
 class Counter(val count: Int = 0){
