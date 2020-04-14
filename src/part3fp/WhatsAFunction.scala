@@ -39,6 +39,18 @@ object WhatsAFunction extends App{
 
   println(concate("Uno", "Dos")) // UnoDos
 
+  // Function1[Int, Function1[Int,Int]]
+  val superAdder: Int => (Int => Int) = new Function1[Int, Function1[Int,Int]] {
+    override def apply(x: Int): Function1[Int, Int] = new Function[Int, Int] {
+      override def apply(y: Int): Int = x + y
+    }
+  }
+
+  val adder3 = superAdder(3)
+  println(adder3(4))
+
+  println(superAdder(5)(4)) // Curried Function
+
 
 
 }
