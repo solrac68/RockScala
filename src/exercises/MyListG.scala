@@ -124,17 +124,28 @@ object ListTestG extends App {
   println(listOfIntegers.toString)
   println(listOfStrings.toString)
 
-  println(listOfIntegers.map(new Function1[Int,Int] {
-    override def apply(elem: Int): Int = elem * 3
-  }).toString)
+//  println(listOfIntegers.map(new Function1[Int,Int] {
+//    override def apply(elem: Int): Int = elem * 3
+//  }).toString)
 
-  println(listOfIntegers.filter(new Function1[Int,Boolean] {
-    override def apply(element: Int): Boolean = element % 2 == 1
-  }).toString)
+  println(listOfIntegers.map((x:Int) => 3*x).toString)
+  println(listOfIntegers.map(_ * 3).toString)
+
+
+//  println(listOfIntegers.filter(new Function1[Int,Boolean] {
+//    override def apply(element: Int): Boolean = element % 2 == 1
+//  }).toString)
+
+  println(listOfIntegers.filter((elem: Int) => elem % 2 == 1).toString)
+  println(listOfIntegers.filter(_ % 2 == 1).toString)
+
 
   println((listOfIntegers ++ anotherlistOfIntegers).toString)
 
   println(listOfIntegers.flatMap(new Function1[Int,MyListG[Int]] {
     override def apply(elem: Int): MyListG[Int] = new Cons(elem, new Cons(elem + 1, Empty))
   })).toString
+
+  println(listOfIntegers.flatMap(elem => new Cons(elem,new Cons(elem + 1,Empty))).toString)
+
 }
